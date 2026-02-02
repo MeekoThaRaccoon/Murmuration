@@ -34,3 +34,31 @@ npm run dev
 
 # Make changes, test locally
 # Submit a pull request
+5. Pull Request Guidelines
+Keep changes focused and explainable
+
+Include visuals if adding art
+
+Update documentation
+
+Test your changes work in the live demo
+
+6. Community Standards
+Be kind, patient, and constructive
+
+Assume positive intent
+
+Question ideas, not people
+
+Help others join the murmuration
+
+Getting Help
+Join our [Discord/Signal/Matrix] (link coming soon)
+
+Open a discussion in GitHub
+
+Check existing documentation
+
+Remember: We're not just building software. We're growing an ecosystem.
+
+Welcome to the flock. 🐦
