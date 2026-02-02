@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Murmuration Protocol - SolarPunk's Living Infrastructure</title>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.7.0/lib/p5.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #0a0f1e;
+            color: #00ff9d;
+            font-family: 'Courier New', monospace;
+            overflow-x: hidden;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            padding: 40px 0;
+            border-bottom: 2px solid #00ff9d;
+            margin-bottom: 40px;
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            background: linear-gradient(90deg, #00ff9d, #00a8ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        #p5-container {
+            width: 100%;
+            height: 600px;
+            border: 3px solid #00a8ff;
+            border-radius: 10px;
+            margin: 30px 0;
+        }
+        .controls {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        button {
+            background: rgba(0, 255, 157, 0.2);
+            border: 2px solid #00ff9d;
+            color: #00ff9d;
+            padding: 12px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: 'Courier New', monospace;
+            font-size: 16px;
+            transition: all 0.3s;
+        }
+        button:hover {
+            background: rgba(0, 255, 157, 0.4);
+            transform: translateY(-2px);
+        }
+        .status {
+            text-align: center;
+            margin: 20px 0;
+            padding: 15px;
+            background: rgba(0, 168, 255, 0.1);
+            border-radius: 8px;
+        }
+        .nodes {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+        .node-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(0, 255, 157, 0.3);
+            border-radius: 10px;
+            padding: 20px;
+        }
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 1px solid #00ff9d;
+            color: #88a;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🐦 Murmuration Protocol</h1>
+            <p>Infrastructure that doesn't resist attacks—it transforms. Networks that don't hide—they dance.</p>
+        </header>
+
+        <div id="p5-container"></div>
+
+        <div class="controls">
+            <button onclick="addProbe()">Simulate Attack</button>
+            <button onclick="addNode()">Add Node</button>
+            <button onclick="toggleDebug()">Toggle Debug</button>
+        </div>
+
+        <div class="status">
+            <p id="status-text">🟢 Network Stable - 5 nodes murmuring</p>
+            <p id="probe-count">Probes diverted: 0 | Transformations: 0</p>
+        </div>
+
+        <div class="nodes" id="node-list">
+            <!-- Filled by JS -->
+        </div>
+
+        <div style="margin: 40px 0; padding: 30px; background: rgba(0,0,0,0.3); border-radius: 15px;">
+            <h2>How It Works</h2>
+            <p>Each node in the murmuration follows three rules:</p>
+            <ul style="margin: 15px 0 15px 30px;">
+                <li><strong>Alignment:</strong> Steer toward average heading of neighbors</li>
+                <li><strong>Cohesion:</strong> Move toward average position of neighbors</li>
+                <li><strong>Separation:</strong> Avoid crowding neighbors</li>
+            </ul>
+            <p>When a probe (attack) is detected:</p>
+            <ul style="margin: 15px 0 15px 30px;">
+                <li>The nearest node transforms (changes color/size)</li>
+                <li>The pattern is disrupted but reforms elegantly</li>
+                <li>Art is generated from the attack vector</li>
+                <li>The entire flock learns and adapts</li>
+            </ul>
+        </div>
+
+        <footer>
+            <p>Murmuration Protocol v0.1 | <a href="https://github.com/MeekoThaRaccoon/Murmuration" style="color: #00ff9d;">GitHub</a> | SolarPunk Infrastructure</p>
+            <p>This is living code. Fork it, evolve it, join the flock.</p>
+        </footer>
+    </div>
+
+    <script src="sketch.js"></script>
+    <script src="network.js"></script>
+</body>
+</html>
