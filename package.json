@@ -1,0 +1,33 @@
+{
+  "name": "murmuration-protocol",
+  "version": "0.1.0",
+  "description": "SolarPunk's living infrastructure - networks that transform instead of resist",
+  "main": "index.html",
+  "scripts": {
+    "start": "python3 -m http.server 8000",
+    "dev": "npx live-server --port=8000",
+    "test": "echo \"No tests yet - this is living code\" && exit 0"
+  },
+  "keywords": [
+    "solarpunk",
+    "decentralized",
+    "generative",
+    "art",
+    "network",
+    "security",
+    "regenerative"
+  ],
+  "author": "SolarPunk Collective",
+  "license": "MIT",
+  "dependencies": {
+    "p5": "^1.7.0"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MeekoThaRaccoon/Murmuration.git"
+  },
+  "homepage": "https://github.com/MeekoThaRaccoon/Murmuration#readme"
+}
